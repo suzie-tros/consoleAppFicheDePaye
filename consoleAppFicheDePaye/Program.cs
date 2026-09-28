@@ -8,7 +8,7 @@ namespace consoleAppFicheDePaye
         {
 
 
-
+            //commentaire sur le code : ce programme calcule la fiche de paie d'un employé en fonction de son salaire horaire, du nombre d'heures travaillées et des différentes cotisations sociales. Il affiche ensuite les informations de l'employé ainsi que le détail des cotisations salariales et patronales.
             string nom;
             Console.WriteLine("Quel est votre nom ? ");
             nom = Console.ReadLine();
@@ -101,16 +101,27 @@ namespace consoleAppFicheDePaye
 
             decimal salairTotal = salairebrut + totalCotisationsPatronales;
 
+            Console.WriteLine("**** fiche de Paye association AAD ****");
 
-            Console.WriteLine($"Complémentaire Santé: {tauxComplementaireSanté:C}");
-            Console.WriteLine($"Vieillesse: {vieillesse:C}");
-            Console.WriteLine($"Retraite Complémentaire: {retraiteComplémentaire:C}");
-            Console.WriteLine($"Contribution Équilibrée Générale: {contributionEquilibrGénéral:C}");
-            Console.WriteLine($"CSG Déductible: {CSGDéductible:C}");
-            Console.WriteLine($"CSG Non Déductible: {CSGNonDéductible:C}");
-            Console.WriteLine($"CRDS: {CRDS:C}");
-            Console.WriteLine($"total Cotisations: {totalCotisations:C}\n \n");
+            Console.WriteLine($"Nom: {nom}");
+            Console.WriteLine($"Prénom: {prenom}");
+            Console.WriteLine($"Mois: {mois}");
+            Console.WriteLine($"Nombre d'heures travaillées: {horaireMensuel}");
+            Console.WriteLine($"Taux horaire: {salaireHoraire:C}\n");
+
+            Console.WriteLine($"Salaire Brut: {salairebrut:C}\n");  
+
+            Console.WriteLine($"Cotisations salariales:");
+            Console.WriteLine($"\tComplémentaire Santé: {tauxComplementaireSanté:C}");
+            Console.WriteLine($"\tVieillesse: {vieillesse:C}");
+            Console.WriteLine($"\tRetraite Complémentaire: {retraiteComplémentaire:C}");
+            Console.WriteLine($"\tContribution Équilibrée Générale: {contributionEquilibrGénéral:C}");
+            Console.WriteLine($"\tCSG Déductible: {CSGDéductible:C}");
+            Console.WriteLine($"\tCSG Non Déductible: {CSGNonDéductible:C}");
+            Console.WriteLine($"\tCRDS: {CRDS:C}");
+            Console.WriteLine($"\ttotal Cotisations: {totalCotisations:C}\n \n");
             Console.WriteLine($"Cotisations patronales:");
+
 
 
         }
